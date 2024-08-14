@@ -1,14 +1,14 @@
 import React from 'react'
 
 function Box({title,item,result}) {
-  console.log(result);
+  console.log(item);
   return (
-    <div className={`box ${result}`}>
+    <div className={`box ${item ? result : 'tie'}`}>
         <h1>
             {title}
         </h1>
         <img className='item-img' src={item&&item.img}></img>
-        <h2>{result}</h2>
+        <h2>{item ? result : 'tie'}</h2>
     </div>
   )
 }
