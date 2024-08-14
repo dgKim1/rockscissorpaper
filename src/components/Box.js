@@ -1,13 +1,14 @@
 import React from 'react'
 
-function Box({title,item}) {
+function Box({title,item,result}) {
+  console.log(result);
   return (
-    <div className='box'>
+    <div className={`box ${result}`}>
         <h1>
             {title}
         </h1>
         <img className='item-img' src={item&&item.img}></img>
-        <h2>win</h2>
+        <h2>{result}</h2>
     </div>
   )
 }
